@@ -1,18 +1,27 @@
 <template>
 	<div class="uk-container">
-		<h1 class="uk-heading-medium">{{greeting}}</h1>
+		<h1>{{greeting}}</h1>
 		<p>
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque amet quos repudiandae esse eveniet labore sunt impedit officia, voluptas perferendis nesciunt quia ducimus itaque alias accusantium cum autem ut reprehenderit.
+			This is a Nuxt 3 minimal starter template showing how to use Nuxt 3 with the Uikit Framework. 
 		</p>
-		<button class="uk-button uk-button-primary" @click="doSomething">
-			Buy Me
+
+		<ul>
+			<li>Nuxt 3</li>
+			<li>Vue 3</li>
+			<li>Uikit 3</li>
+			<li>Vite</li>
+			<li>Sass</li>
+		</ul>
+		<button class="uk-button uk-button-primary" @click="testNotification">
+			Test Notification
 		</button>
 	</div>
 </template>
 <script setup>
-const greeting = "Hello World!"
 
-function doSomething(){
+const greeting = "Hello"
+
+function testNotification(){
 	useNuxtApp().$uikit.notification({
 		message: 'Notification Demo',
 		status: 'primary',
